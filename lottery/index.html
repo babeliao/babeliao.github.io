@@ -6,6 +6,15 @@
     <style type="text/css">
         td {
             border-bottom: 1px solid #ccc;
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        .randomShow {
+            height: 30px;
+            width: 190px;
+            border: 1px solid red;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -23,36 +32,36 @@
         <table width="946" height="79" border="0" style="margin: auto;">
             <tr>
                 <td><input name="text36" type="text" id="result_1"
-                           style="height:30px;width:190px;border:1px solid red;font-size:25;" size="28" readonly/>
+                         class="randomShow"  size="20" readonly/>
                 </td>
                 <td><input name="text37" type="text" id="result_2"
-                           style="height:30px;width:190px;border:1px solid red;font-size:25;" size="20" readonly/>
+                           class="randomShow"  size="20" readonly/>
                 </td>
                 <td><input name="text38" type="text" id="result_3"
-                           style="height:30px;width:190px;border:1px solid red;font-size:25;" size="20" readonly/>
+                           class="randomShow"   size="20" readonly/>
                 </td>
                 <td><input name="text39" type="text" id="result_4"
-                           style="height:30px;width:190px;border:1px solid red;font-size:25;" size="20" readonly/>
+                           class="randomShow"   size="20" readonly/>
                 </td>
                 <td><input name="text40" type="text" id="result_5"
-                           style="height:30px;width:190px;border:1px solid red;font-size:25;" size="20" readonly/>
+                           class="randomShow" size="20" readonly/>
                 </td>
             </tr>
             <tr>
                 <td><input name="text41" type="text" id="result_6"
-                           style="height:30px;width:190px;border:1px solid red;font-size:25;" size="28" readonly/>
+                           class="randomShow"   size="28" readonly/>
                 </td>
                 <td><input name="text42" type="text" id="result_7"
-                           style="height:30px;width:190px;border:1px solid red;font-size:25;" size="20" readonly/>
+                           class="randomShow"  size="20" readonly/>
                 </td>
                 <td><input name="text43" type="text" id="result_8"
-                           style="height:30px;width:190px;border:1px solid red;font-size:25;" size="20" readonly/>
+                           class="randomShow"  size="20" readonly/>
                 </td>
                 <td><input name="text44" type="text" id="result_9"
-                           style="height:30px;width:190px;border:1px solid red;font-size:25;" size="20" readonly/>
+                           class="randomShow" size="20" readonly/>
                 </td>
                 <td><input name="text45" type="text" id="result_10"
-                           style="height:30px;width:190px;border:1px solid red;font-size:25;" size="20" readonly/></td>
+                           class="randomShow" size="20" readonly/></td>
             </tr>
         </table>
 
@@ -86,14 +95,14 @@
     var prizeList = [];
     var cash = [];
     var prizeNum = [
-        {name: "A", num: 8},
-        {name: "B", num: 30},
-        {name: "C", num: 30},
-        {name: "D", num: 36},
-        {name: "E", num: 3},
-        {name: "F", num: 10},
-        {name: "G", num: 2},
-        {name: "H", num: 20}
+        {name: "misis丝巾", num: 8},
+        {name: "眼部按摩器", num: 30},
+        {name: "蔬菜单次卡", num: 30},
+        {name: "漱口水", num: 36},
+        {name: "汽车保养劵", num: 3},
+        {name: "智能牙刷", num: 10},
+        {name: "空气净化器", num: 2},
+        {name: "特产黑木耳", num: 20}
     ];
 
 
@@ -217,6 +226,11 @@
         for (var m = 0; m < n; m++) {
             html += '<tr>'
             var ii = i;
+            for (; i < ii + 5; i++) {
+                html += '<td id="' + i + '"></td>'
+            }
+            html += '</tr>'
+            html += '<tr>'
             for (; i < ii + 10; i++) {
                 html += '<td id="' + i + '"></td>'
             }
