@@ -117,17 +117,19 @@
     }
 
 
-    var DOMOperate = {
-        "num": 1,
-        "setValues": function (n) {
-            document.getElementById(this.num).innerText = document.getElementById("result_" + n).value;
-            this.num++;
-        },
-        "setHistoryValues": function (str) {
-            document.getElementById(this.num).innerText = str;
-            this.num++;
+    var DOMOperate = (function(){
+        var num = 1;
+        return{
+            "setValues": function (n) {
+                document.getElementById(num).innerText = document.getElementById("result_" + n).value;
+                num++;
+            },
+            "setHistoryValues": function (str) {
+                document.getElementById(num).innerText = str;
+                num++;
+            }
         }
-    }
+    })()
 
     var runningMic = document.getElementById("runningMic");
     var stopMic = document.getElementById("stopMic");
