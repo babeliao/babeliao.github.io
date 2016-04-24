@@ -1,0 +1,441 @@
+:root {
+    --baseline: 1.7778rem;
+    --site-color: #4ab5c7;
+    --text-color: #3d464d;
+    --meta-color: #9ea3a6;
+    --monospace: "Input Mono", "Source Code Pro", "Monaco", monospace;
+    --sans-serif-fallback: "Helvetica Neue", Helvetica, sans-serif;
+    --sans-serif: "Neue Haas Unica Web", "Helvetica Neue", Helvetica, sans-serif;
+    --sans-serif: "Neue Haas Unica Web", var(--sans-serif-fallback);
+    --serif-fallback: "Georgia", "Times New Roman", serif;
+    --serif: "Tiempos Text Web", "Georgia", "Times New Roman", serif;
+    --serif: "Tiempos Text Web", var(--serif-fallback)
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    font-weight: 400;
+    text-align: center
+}
+
+.h1, h1 {
+    font-size: 1.333rem
+}
+
+.h2, .h3, h2, h3 {
+    font-size: 1.111rem
+}
+
+* + .h2, * + .h3, * + h2, * + h3 {
+    padding-top: 1.7778rem;
+    padding-top: var(--baseline)
+}
+
+.h2, h2 {
+    font-family: Neue Haas Unica Web, Helvetica Neue, Helvetica, sans-serif
+}
+
+.h3, h3 {
+    text-transform: uppercase;
+    -webkit-font-feature-settings: "smcp", "c2sc";
+    font-feature-settings: "smcp", "c2sc";
+    letter-spacing: .2em;
+    font-style: normal;
+    text-align: left
+}
+
+.h4, h4 {
+    font-family: Tiempos Text Web, Georgia, Times New Roman, serif;
+    font-weight: 400;
+    font-size: 1rem;
+    font-style: italic
+}
+
+a {
+    text-decoration: underline;
+    color: inherit
+}
+
+a:focus, a:hover {
+    color: #4ab5c7;
+    color: var(--site-color)
+}
+
+code, pre {
+    font-family: Input Mono, Source Code Pro, Monaco, monospace;
+    font-size: .875rem
+}
+
+.footnotes:before, hr {
+    content: '';
+    display: block;
+    width: 6rem;
+    padding-top: 1.7778rem;
+    padding-top: var(--baseline);
+    margin-bottom: 3.5556rem;
+    margin: -2px auto calc(var(--baseline) * 2);
+    border: 0;
+    border-bottom: 2px solid #9ea3a6;
+    border-bottom: 2px solid var(--meta-color);
+    opacity: .5
+}
+
+.footnotes:before {
+    padding-top: 0
+}
+
+.meta {
+    color: #9ea3a6;
+    color: var(--meta-color)
+}
+
+blockquote {
+    padding-left: 1.7778rem;
+    padding-left: var(--baseline);
+    font-style: italic;
+    border-left: 2px solid #4ab5c7;
+    border-left: 2px solid var(--site-color)
+}
+
+blockquote em, blockquote strong {
+    font-weight: 400;
+    font-style: normal
+}
+
+mark {
+    color: #ef540d;
+    background-color: rgba(239, 84, 13, 0.1)
+}
+
+.caps {
+    -webkit-font-feature-settings: "smcp", "c2sc", "lnum";
+    font-feature-settings: "smcp", "c2sc", "lnum";
+    letter-spacing: .05em
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box
+}
+
+button, input, textarea {
+    font: inherit
+}
+
+blockquote, figure, form, h1, h2, ol, p, table, ul {
+    margin-bottom: 1.7778rem;
+    margin-bottom: var(--baseline)
+}
+
+img {
+    max-width: 100%
+}
+
+ol, ul {
+    padding-left: 1.7778rem;
+    padding-left: var(--baseline);
+    overflow: auto
+}
+
+li ol, li ul {
+    margin-bottom: 0
+}
+
+html {
+    font: 112.5%/1.7778 Tiempos Text Web, Georgia, Times New Roman, serif;
+    font: 112.5%/1.7778;
+    color: #3d464d;
+    color: var(--text-color);
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-feature-settings: "liga", "hist", "onum";
+    font-feature-settings: "liga", "hist", "onum"
+}
+
+.wf-loading:root {
+    --serif: "Georgia", "Times New Roman", serif;
+    --serif: var(--serif-fallback);
+    --sans-serif: "Helvetica Neue", Helvetica, sans-serif;
+    --sans-serif: var(--sans-serif-fallback);
+    font-family: --serif-fallback;
+    font-size: 118.75%;
+    line-height: 1.6842
+}
+
+@media (max-width: 40rem) {
+    html {
+        font-size: 100%
+    }
+}
+
+@media (max-width: 30rem) {
+    html {
+        font-size: 87.5%
+    }
+}
+
+.wrap {
+    max-width: 36rem;
+    margin: 0 auto
+}
+
+.nav {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0
+}
+
+.nav li {
+    display: inline-block
+}
+
+.nav li + li {
+    margin-left: .8889rem;
+    margin-left: calc(var(--baseline) / 2)
+}
+
+.site__header {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1.7778rem 0;
+    padding: var(--baseline) 0;
+    margin-bottom: 1.7778rem;
+    margin-bottom: var(--baseline)
+}
+
+.site__nav {
+    font-family: Neue Haas Unica Web, Helvetica Neue, Helvetica, sans-serif
+}
+
+.site__nav a {
+    text-decoration: none;
+    color: #9ea3a6;
+    color: var(--meta-color)
+}
+
+.site__nav a.active, .site__nav a:hover {
+    color: #3d464d;
+    color: var(--text-color)
+}
+
+.site__title {
+    background-color: #3d464d;
+    background-color: var(--text-color)
+}
+
+.page__header {
+    margin-bottom: 3.5556rem;
+    margin-bottom: calc(var(--baseline) * 2)
+}
+
+.post-list {
+    padding-left: 0
+}
+
+.post-list__item {
+    list-style: none
+}
+
+.post-list__item a {
+    text-decoration: none
+}
+
+.page__content {
+    margin-bottom: 3.5556rem;
+    margin-bottom: calc(var(--baseline) * 2)
+}
+
+sup[id*=fnref] a {
+    margin: 0 .2em;
+    text-decoration: none;
+    color: #4ab5c7;
+    color: var(--site-color)
+}
+
+.footnotes, sup[id*=fnref] a {
+    font-family: Neue Haas Unica Web, Helvetica Neue, Helvetica, sans-serif;
+    font-size: .7778rem
+}
+
+.footnotes {
+    padding-top: 3.5556rem;
+    padding-top: calc(var(--baseline) * 2);
+    color: #9ea3a6;
+    color: var(--meta-color)
+}
+
+.footnotes ol {
+    padding-left: 0
+}
+
+.footnotes p {
+    margin-bottom: .8889rem;
+    margin-bottom: calc(var(--baseline) / 2)
+}
+
+.footnotes li:target {
+    color: #3d464d;
+    color: var(--text-color)
+}
+
+figure {
+    font-family: Neue Haas Unica Web, Helvetica Neue, Helvetica, sans-serif;
+    font-size: .7778rem;
+    color: #9ea3a6;
+    color: var(--meta-color)
+}
+
+figcaption, figcaption :last-child {
+    margin: 0
+}
+
+.alignleft, .alignright {
+    width: 50%
+}
+
+.alignleft {
+    float: left;
+    margin-left: -25%;
+    margin-right: 1.7778rem;
+    margin-right: var(--baseline)
+}
+
+.alignright {
+    float: right;
+    margin-right: -25%;
+    margin-left: 1.7778rem;
+    margin-left: var(--baseline)
+}
+
+@media (max-width: 56rem) {
+    .alignleft, .alignright {
+        width: 40%
+    }
+
+    .alignleft {
+        margin-left: 0
+    }
+
+    .alignright {
+        margin-right: 0
+    }
+}
+
+@media (max-width: 30rem) {
+    .alignleft, .alignright {
+        width: 100%;
+        float: none
+    }
+}
+
+.site__footer {
+    font-family: Neue Haas Unica Web, Helvetica Neue, Helvetica, sans-serif;
+    color: #9ea3a6;
+    color: var(--meta-color);
+    border-top: 1px solid currentColor
+}
+
+.b {
+    display: block
+}
+
+.ib {
+    display: inline-block
+}
+
+.hide {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0
+}
+
+.pas {
+    padding: .44445rem;
+    padding: calc(var(--baseline) / 4)
+}
+
+.pam {
+    padding: .8889rem;
+    padding: calc(var(--baseline) / 2)
+}
+
+.pal {
+    padding: 1.7778rem;
+    padding: var(--baseline)
+}
+
+.phs {
+    padding-left: .44445rem;
+    padding-left: calc(var(--baseline) / 4);
+    padding-right: .44445rem;
+    padding-right: calc(var(--baseline) / 4)
+}
+
+.phm {
+    padding-left: .8889rem;
+    padding-left: calc(var(--baseline) / 2);
+    padding-right: .8889rem;
+    padding-right: calc(var(--baseline) / 2)
+}
+
+.phl {
+    padding-left: 1.7778rem;
+    padding-left: var(--baseline);
+    padding-right: 1.7778rem;
+    padding-right: var(--baseline)
+}
+
+.pvs {
+    padding-top: .44445rem;
+    padding-top: calc(var(--baseline) / 4);
+    padding-bottom: .44445rem;
+    padding-bottom: calc(var(--baseline) / 4)
+}
+
+.pvm {
+    padding-top: .8889rem;
+    padding-top: calc(var(--baseline) / 2);
+    padding-bottom: .8889rem;
+    padding-bottom: calc(var(--baseline) / 2)
+}
+
+.pvl {
+    padding-top: 1.7778rem;
+    padding-top: var(--baseline);
+    padding-bottom: 1.7778rem;
+    padding-bottom: var(--baseline)
+}
+
+.m0 {
+    margin: 0
+}
+
+.ml {
+    margin-bottom: 1.7778rem;
+    margin-bottom: var(--baseline)
+}
+
+:root {
+    --baseline: 1.7778rem;
+    --site-color: #4ab5c7;
+    --text-color: #3d464d;
+    --meta-color: #9ea3a6;
+    --monospace: "Input Mono", "Source Code Pro", "Monaco", monospace;
+    --sans-serif-fallback: "Helvetica Neue", Helvetica, sans-serif;
+    --sans-serif: "Neue Haas Unica Web", "Helvetica Neue", Helvetica, sans-serif;
+    --serif-fallback: "Georgia", "Times New Roman", serif;
+    --serif: "Tiempos Text Web", "Georgia", "Times New Roman", serif
+}
